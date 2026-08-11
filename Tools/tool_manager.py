@@ -3,8 +3,9 @@ from Core.base_tool import BaseTool
 from Core.interfaces import ILogger, IToolManager  # <-- Import thêm IToolManager
 
 
-class ToolManager(IToolManager):  # <-- Kế thừa IToolManager
+class ToolManager:
     def __init__(self, registry, logger=None):
+        # Sử dụng registry được inject từ bên ngoài
         self.registry = registry
         self.logger = logger
 
@@ -14,37 +15,33 @@ class ToolManager(IToolManager):  # <-- Kế thừa IToolManager
     def get_all_schemas(self):
         return self.registry.get_all_schemas()
 
-    def execute_tool(self, tool_name: str, **kwargs):
+    def execute_tool(self, tool_name: str, **kwargs) -> Dict[str, Any]:
+        # SỬA LỖI TẠI ĐÂY: Dùng self.registry.get() thay vì self._registry.get()
         tool = self.registry.get(tool_name)
+        
         if not tool:
             return {"success": False, "error": f"Tool '{tool_name}' không tồn tại."}
 
-        tool = self._registry[tool_name]
-
-        # --- CƠ CHẾ XÁC NHẬN BẢO MẬT (MỚI) ---
+        # Vòng lặp cấp quyền (Preserved Existing Functionality)
         if tool.requires_permission:
-            print(f"\n\033[93m[⚠ YÊU CẦU XÁC NHẬN BẢO MẬT]\033[0m")
-            print(f"AI muốn chạy lệnh : \033[96m{tool_name}\033[0m")
+            print(f"\n[⚠ YÊU CẦU XÁC NHẬN BẢO MẬT]")
+            print(f"AI muốn chạy lệnh : {tool.name}")
             print(f"Tham số          : {kwargs}")
-
+            
             while True:
                 confirm = input("Cho phép thực thi? [Y/N]: ").strip().lower()
                 if confirm == 'y':
-                    self.logger.info(f"[ToolEngine] Người dùng ĐÃ XÁC NHẬN cho phép '{tool_name}'.")
+                    if self.logger:
+                        self.logger.info(f"[ToolManager] Người dùng ĐÃ CẤP QUYỀN cho '{tool.name}'.")
                     break
                 elif confirm == 'n':
-                    self.logger.warning(f"[ToolEngine] Người dùng ĐÃ TỪ CHỐI '{tool_name}'.")
-                    return {"success": False, "error": "User denied permission. (Người dùng đã hủy lệnh)"}
-        # --------------------------------------
+                    if self.logger:
+                        self.logger.warning(f"[ToolManager] Người dùng ĐÃ TỪ CHỐI '{tool.name}'.")
+                    return {"success": False, "error": "Người dùng đã từ chối cấp quyền thực thi. Hãy thông báo lại cho người dùng."}
+                else:
+                    print("Vui lòng chỉ nhập Y hoặc N.")
 
-        # Thực thi Tool
-        try:
-            result = tool.execute(**kwargs)
-            self.logger.info(f"[ToolEngine] Tool '{tool_name}' thực thi xong. Kết quả: {result}")
-            return tool.execute(**kwargs)
-        except Exception as e:
-            error_msg = f"Lỗi nội tại khi chạy tool '{tool_name}': {str(e)}"
-            self.logger.error(f"[ToolEngine] {error_msg}")
-            return {"success": False, "error": error_msg}
+        # Gọi hàm execute của BaseTool (Đã tích hợp sẵn Verify Layer)
+        return tool.execute(**kwargs)
 
 
