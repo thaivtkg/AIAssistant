@@ -64,9 +64,11 @@ class PluginLoader:
                 tool_instance = tool_class()
                 
                 self.registry.register(tool_instance)
-                
                 if self.logger:
-                    self.logger.info(f"  [+] Đã nạp Tool: {tool_instance.name} (Plugin: {manifest.get('plugin_id')})")
+                    self.logger.info(f"  [+] Đã nạp Tool: {tool_instance.name}")
+            except ValueError as ve:
+                if self.logger:
+                    self.logger.error(f"[PluginLoader] TỪ CHỐI nạp {class_name}: {ve}")
             except ModuleNotFoundError as e:
                 if self.logger:
                     self.logger.error(f"[PluginLoader] Không tìm thấy file code '{full_module_path}': {e}")

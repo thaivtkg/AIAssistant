@@ -7,43 +7,45 @@ class BaseTool:
         self.requires_permission = requires_permission
 
     def get_schema(self) -> Dict[str, Any]:
-        """Khai báo JSON schema cho LLM."""
         raise NotImplementedError
 
+    def _validate(self, **kwargs) -> Dict[str, Any]:
+        """Validate input. Subclass có thể override nếu cần kiểm tra logic phức tạp."""
+        return {"valid": True}
+
     def _execute(self, **kwargs) -> Dict[str, Any]:
-        """Logic thực thi chính. Các class con BẮT BUỘC ghi đè hàm này."""
+        """Nơi subclass BẮT BUỘC triển khai logic."""
         raise NotImplementedError
 
     def verify(self, **kwargs) -> Dict[str, Any]:
-        """
-        Xác minh hậu kiểm (Verification Layer).
-        Mặc định trả về True cho các Tool chỉ đọc (Read-only).
-        """
+        """Hậu kiểm. Mặc định trả về True cho Tool read-only."""
         return {"verified": True, "message": "Không yêu cầu xác minh."}
 
+    # TUYỆT ĐỐI KHÔNG OVERRIDE HÀM NÀY Ở SUBCLASS
     def execute(self, **kwargs) -> Dict[str, Any]:
-        """Hàm public được gọi bởi ToolManager. Quản lý vòng đời Thực thi -> Xác minh."""
-        # Bước 1: Thực thi logic chính
+        # 1. Validate
+        val_result = self._validate(**kwargs)
+        if not val_result.get("valid", False):
+            return {"success": False, "error": f"Validation failed: {val_result.get('error', 'Unknown')}"}
+
+        # 2. Execute
         try:
             result = self._execute(**kwargs)
         except Exception as e:
-            return {"success": False, "error": f"Ngoại lệ khi chạy tool: {str(e)}"}
+            return {"success": False, "error": f"Execution exception: {str(e)}"}
 
-        # Nếu thất bại ngay từ bước thực thi, trả về luôn (không cần xác minh)
         if not result.get("success", False):
             return result
 
-        # Bước 2: Xác minh kết quả (Verification)
+        # 3. Verify
         try:
-            verify_result = self.verify(**kwargs)
-            result["verification"] = verify_result
-            
-            # Nếu xác minh thất bại, lật ngược kết quả success thành False
-            if not verify_result.get("verified", False):
+            ver_result = self.verify(**kwargs)
+            result["verification"] = ver_result
+            if not ver_result.get("verified", False):
                 result["success"] = False
-                result["error"] = f"Lệnh chạy không báo lỗi, nhưng xác minh hệ thống THẤT BẠI: {verify_result.get('message', 'Không có lý do')}"
+                result["error"] = f"Verification failed: {ver_result.get('message', 'No reason provided')}"
         except Exception as e:
             result["success"] = False
-            result["error"] = f"Ngoại lệ trong quá trình xác minh hậu kiểm: {str(e)}"
+            result["error"] = f"Verification exception: {str(e)}"
 
         return result

@@ -1,5 +1,7 @@
 import json
-from typing import Generator, List, Dict, Any
+import re
+from typing import Any, Dict, Generator, List
+
 from Core.stream_filter import ThinkingFilter, ToolCallFilter
 
 
@@ -41,29 +43,32 @@ class AgentRuntime:
                 tool_name = tool_filter.tool_name
                 tool_kwargs = tool_filter.tool_kwargs
 
-                # --- AUTO-CORRECTION 1: LỖI CÚ PHÁP JSON ---
+                # --- AUTO-CORRECTION: LỖI CÚ PHÁP JSON ---
                 if tool_name == "json_parse_error":
-                    error_details = tool_kwargs.get('error', 'Lỗi không xác định')
-                    yield f"\n[⚙️ Định dạng sai, Runtime đang ép AI thử lại...]\n"
-
+                    error_details = tool_kwargs.get('error', 'Unknown')
+                    # CHỈ LOG, KHÔNG YIELD RA UI
+                    if self.tool_manager and self.tool_manager.logger:
+                        self.tool_manager.logger.warning(f"[Runtime Recovery] JSON parse error: {error_details}. Retry {attempt+1}/{self.max_retries}")
+                    
                     messages.append({"role": "assistant", "content": iteration_response})
                     messages.append({
-                        "role": "system",
-                        "content": f"[RUNTIME ERROR] Định dạng gọi công cụ bị sai: {error_details}. BẮT BUỘC xuất lại bằng đúng chuẩn <call>{{\"name\": \"...\", \"kwargs\": {{...}}}}</call>."
+                        "role": "system", 
+                        "content": f"[RUNTIME ERROR] JSON Invalid: {error_details}. Must use <call> JSON format."
                     })
-                    continue  # Bắt AI sinh lại text
+                    continue 
 
-                # --- AUTO-CORRECTION 2: TOOL KHÔNG TỒN TẠI ---
+                # --- AUTO-CORRECTION: TOOL KHÔNG TỒN TẠI ---
                 if self.tool_manager and not self.tool_manager.has_tool(tool_name):
-                    yield f"\n[⚙️ Lệnh ảo (Hallucination), Runtime đang ép AI sửa...]\n"
-
+                    if self.tool_manager and self.tool_manager.logger:
+                        self.tool_manager.logger.warning(f"[Runtime Recovery] Hallucinated tool '{tool_name}'. Retry {attempt+1}/{self.max_retries}")
+                    # KHÔNG YIELD
                     messages.append({"role": "assistant", "content": iteration_response})
                     messages.append({
-                        "role": "system",
-                        "content": f"[RUNTIME ERROR] Công cụ '{tool_name}' KHÔNG TỒN TẠI. Hãy kiểm tra lại danh sách công cụ ở System Prompt."
+                        "role": "system", 
+                        "content": f"[RUNTIME ERROR] Tool '{tool_name}' DOES NOT EXIST."
                     })
-                    continue  # Bắt AI sinh lại text
-
+                    continue
+                
                 # --- THỰC THI TOOL (Sẽ cấy Verification Layer vào đây ở bước sau) ---
                 yield f"\n[⚙️ Thực thi: {tool_name}...]\n"
                 try:
@@ -71,7 +76,7 @@ class AgentRuntime:
                         "error": "ToolManager offline"}
                 except Exception as e:
                     tool_result = {"error": f"Exception: {str(e)}"}
-
+                
                 # Nạp kết quả vào Context để AI chốt hạ hoặc làm bước tiếp theo
                 tool_call_str = f"<call>{json.dumps({'name': tool_name, 'kwargs': tool_kwargs}, ensure_ascii=False)}</call>"
                 messages.append({"role": "assistant", "content": iteration_response + tool_call_str})
@@ -79,6 +84,19 @@ class AgentRuntime:
 
                 continue
             else:
-                break  # Không gọi Tool nữa -> Chấm dứt lượt chat
+                # --- AUTO-CORRECTION 3: BẮT LỖI JSON TRẦN ---
+                # Nếu AI nói chuyện nhưng có dấu hiệu tuôn ra JSON của Tool
+                if re.search(r'\{\s*"name"\s*:', iteration_response) and "<call>" not in iteration_response:
+                    if self.tool_manager and self.tool_manager.logger:
+                        self.tool_manager.logger.warning(f"[Runtime Recovery] Bắt được JSON trần. Đang ép AI bọc thẻ... Retry {attempt+1}/{self.max_retries}")
+                    
+                    messages.append({"role": "assistant", "content": iteration_response})
+                    messages.append({
+                        "role": "system", 
+                        "content": "[RUNTIME ERROR] Bạn đã xuất JSON trần hoặc quên bọc thẻ. BẮT BUỘC phải bọc chuỗi JSON gọi công cụ bên trong thẻ <call> và </call>."
+                    })
+                    continue # Bắt AI sinh lại văn bản ngay lập tức
+                
+                break # Không có lỗi gì -> Phản hồi cho người dùng và kết thúc
 
         return full_response_to_save

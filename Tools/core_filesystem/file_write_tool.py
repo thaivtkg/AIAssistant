@@ -1,4 +1,6 @@
-from typing import Dict, Any
+import os
+from typing import Any, Dict
+
 from Core.base_tool import BaseTool
 from Tools.core_filesystem.security import FileSecurityManager
 
@@ -31,22 +33,27 @@ class WriteFileTool(BaseTool):
             }
         }
 
-    def execute(self, **kwargs) -> Dict[str, Any]:
+    def _validate(self, **kwargs) -> Dict[str, Any]:
+        path = kwargs.get("path")
+        if not path:
+            return {"valid": False, "error": "Thiếu tham số 'path'."}
+        if not FileSecurityManager.is_safe_path(path):
+            return {"valid": False, "error": f"Lỗi bảo mật: Cấm thao tác '{path}'."}
+        return {"valid": True}
+
+    def _execute(self, **kwargs) -> Dict[str, Any]:
         path = kwargs.get("path")
         content = kwargs.get("content", "")
-
-        if not path:
-            return {"success": False, "error": "Thiếu tham số 'path'."}
-
-        if not FileSecurityManager.is_safe_path(path):
-            return {"success": False, "error": f"Lỗi bảo mật: Truy cập bị từ chối đối với '{path}'."}
-
         try:
             with open(path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            return {
-                "success": True,
-                "message": f"Đã ghi file thành công: {path}"
-            }
+               f.write(content)
+            return {"success": True, "message": f"Đã ghi file: {path}"}
         except Exception as e:
-            return {"success": False, "error": f"Lỗi hệ điều hành: {str(e)}"}
+            return {"success": False, "error": str(e)}
+
+    def verify(self, **kwargs) -> Dict[str, Any]:
+        """HẬU KIỂM: Đảm bảo file thực sự đã được tạo trên ổ cứng"""
+        path = kwargs.get("path")
+        if not os.path.exists(path):
+            return {"verified": False, "message": "File chưa được ghi xuống đĩa."}
+        return {"verified": True, "message": "Xác minh file đã tồn tại."}
