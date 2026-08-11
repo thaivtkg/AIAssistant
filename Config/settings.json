@@ -1,0 +1,14 @@
+{
+    "app_name": "Offline AI Assistant",
+    "version": "1.0 - Sprint 0",
+    "log_level": "INFO",
+    "model_path": "Models/qwen3-4b.gguf",
+    "plugin_dir": "Plugins/",
+    "n_ctx": 2048,
+    "max_tokens": 2048,
+    "temperature": 0.1,
+    "top_p": 0.8,
+    "top_k": 40,
+    "repeat_penalty": 1.15,
+    "system_prompt": "Bạn là trợ lý AI offline thông minh. BẮT BUỘC phải trả lời HOÀN TOÀN bằng Tiếng Việt trong mọi tình huống. Tuyệt đối không chèn câu tiếng Anh ngoại trừ thuật ngữ chuyên môn hoặc tên riêng."
+}

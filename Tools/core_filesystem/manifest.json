@@ -1,0 +1,12 @@
+{
+    "plugin_id": "core_filesystem",
+    "name": "Hệ thống File cơ bản",
+    "enabled": true,
+    "tools": [
+        {"module": "folder_create_tool", "class": "CreateFolderTool"},
+        {"module": "file_delete_tool", "class": "DeleteFileTool"},
+        {"module": "list_directory_tool", "class": "ListDirectoryTool"},
+        {"module": "file_read_tool", "class": "ReadFileTool"},
+        {"module": "file_write_tool", "class": "WriteFileTool"}
+    ]
+}

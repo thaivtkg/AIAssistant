@@ -1,0 +1,503 @@
+2026-08-07 06:55:26,426 - AIAssistant - INFO - ========================================
+2026-08-07 06:55:26,426 - AIAssistant - INFO - Khởi động Offline AI Assistant - Phiên bản 1.0 - Sprint 0
+2026-08-07 06:55:26,426 - AIAssistant - INFO - ========================================
+2026-08-07 06:55:26,426 - AIAssistant - INFO - Sprint 0: Khởi tạo dự án thành công. Hệ thống Core đã sẵn sàng!
+2026-08-07 07:12:01,556 - AIAssistant - INFO - ========================================
+2026-08-07 07:12:01,556 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:12:01,556 - AIAssistant - INFO - ========================================
+2026-08-07 07:12:01,557 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:12:01,557 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:12:01,560 - AIAssistant - INFO - Đang nạp model từ: Models/ (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:12:01,562 - AIAssistant - ERROR - Lỗi khi nạp model: Failed to load model from file: Models/
+2026-08-07 07:12:01,562 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:12:01,562 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:12:07,126 - AIAssistant - ERROR - Chưa nạp model AI. Không thể sinh câu trả lời.
+2026-08-07 07:15:22,675 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:15:22,675 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:15:22,675 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:15:22,675 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:15:22,675 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:15:26,101 - AIAssistant - INFO - ========================================
+2026-08-07 07:15:26,101 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:15:26,101 - AIAssistant - INFO - ========================================
+2026-08-07 07:15:26,102 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:15:26,102 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:15:26,103 - AIAssistant - INFO - Đang nạp model từ: Models/ (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:15:26,104 - AIAssistant - ERROR - Lỗi khi nạp model: Failed to load model from file: Models/
+2026-08-07 07:15:26,104 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:15:26,105 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:15:30,607 - AIAssistant - ERROR - Chưa nạp model AI. Không thể sinh câu trả lời.
+2026-08-07 07:16:10,504 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:16:10,504 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:16:10,504 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:16:10,504 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:16:10,504 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:16:14,771 - AIAssistant - INFO - ========================================
+2026-08-07 07:16:14,772 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:16:14,772 - AIAssistant - INFO - ========================================
+2026-08-07 07:16:14,772 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:16:14,772 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:16:14,773 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:16:16,375 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:16:16,376 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:16:16,376 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:17:32,353 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:17:32,353 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:17:32,353 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:17:32,353 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:17:32,353 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:20:08,419 - AIAssistant - INFO - ========================================
+2026-08-07 07:20:08,419 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:20:08,419 - AIAssistant - INFO - ========================================
+2026-08-07 07:20:08,420 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:20:08,420 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:20:08,420 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:20:09,855 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:20:09,855 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:20:09,855 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:20:28,464 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:20:28,465 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:20:28,465 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:20:28,465 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:20:28,465 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:21:50,048 - AIAssistant - INFO - ========================================
+2026-08-07 07:21:50,048 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:21:50,048 - AIAssistant - INFO - ========================================
+2026-08-07 07:21:50,048 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:21:50,048 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:21:50,049 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:21:51,476 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:21:51,476 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:21:51,476 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:24:12,238 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:24:12,238 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:24:12,238 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:24:12,238 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:24:12,238 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:24:50,589 - AIAssistant - INFO - ========================================
+2026-08-07 07:24:50,590 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:24:50,590 - AIAssistant - INFO - ========================================
+2026-08-07 07:24:50,590 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:24:50,590 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:24:50,591 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:24:52,003 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:24:52,003 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:24:52,004 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:25:33,065 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:25:33,065 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:25:33,065 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:25:33,065 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:25:33,065 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:25:33,680 - AIAssistant - INFO - ========================================
+2026-08-07 07:25:33,680 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:25:33,681 - AIAssistant - INFO - ========================================
+2026-08-07 07:25:33,681 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:25:33,681 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:25:33,682 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:25:35,095 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:25:35,095 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:25:35,095 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:31:19,542 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:31:19,542 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:31:19,542 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:31:19,542 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:31:19,542 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:32:16,598 - AIAssistant - INFO - ========================================
+2026-08-07 07:32:16,598 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:32:16,598 - AIAssistant - INFO - ========================================
+2026-08-07 07:32:16,598 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:32:16,599 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:32:16,603 - AIAssistant - INFO - Đang nạp model từ: Models/qwen2.5-3b-instruct-q4_k_m.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:32:17,989 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:32:17,989 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.0.0)
+2026-08-07 07:32:17,989 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:41:12,255 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:41:12,255 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:41:12,255 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:41:12,255 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:41:12,255 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:42:34,985 - AIAssistant - INFO - ========================================
+2026-08-07 07:42:34,985 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:42:34,985 - AIAssistant - INFO - ========================================
+2026-08-07 07:42:34,985 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:42:34,985 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:42:34,989 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:42:37,534 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:42:37,534 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-07 07:42:37,534 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:43:46,715 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:43:46,715 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:43:46,715 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:43:46,716 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:43:46,716 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:44:35,604 - AIAssistant - INFO - ========================================
+2026-08-07 07:44:35,604 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:44:35,604 - AIAssistant - INFO - ========================================
+2026-08-07 07:44:35,604 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:44:35,605 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:44:35,605 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:44:37,549 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:44:37,550 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-07 07:44:37,550 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:47:23,924 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:47:23,924 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:47:23,924 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:47:23,924 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:47:23,924 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-07 07:48:32,575 - AIAssistant - INFO - ========================================
+2026-08-07 07:48:32,575 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-07 07:48:32,575 - AIAssistant - INFO - ========================================
+2026-08-07 07:48:32,576 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-07 07:48:32,576 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-07 07:48:32,577 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-07 07:48:34,414 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-07 07:48:34,414 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-07 07:48:34,414 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-07 07:52:15,731 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-07 07:52:15,731 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-07 07:52:15,731 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-07 07:52:15,731 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-07 07:52:15,731 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 15:41:40,425 - AIAssistant - INFO - ========================================
+2026-08-08 15:41:40,426 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 15:41:40,426 - AIAssistant - INFO - ========================================
+2026-08-08 15:41:40,426 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 15:41:40,426 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 15:41:40,430 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 15:41:42,928 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 15:41:42,929 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 15:41:42,929 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 15:44:54,026 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 15:44:54,028 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 15:44:54,028 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 15:44:54,028 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 15:44:54,028 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 15:44:54,499 - AIAssistant - INFO - ========================================
+2026-08-08 15:44:54,499 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 15:44:54,499 - AIAssistant - INFO - ========================================
+2026-08-08 15:44:54,499 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 15:44:54,500 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 15:44:54,501 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 15:44:56,501 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 15:44:56,502 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 15:44:56,502 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 15:46:32,833 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 15:46:32,833 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 15:46:32,833 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 15:46:32,833 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 15:46:32,833 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 15:51:10,834 - AIAssistant - INFO - ========================================
+2026-08-08 15:51:10,834 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 15:51:10,834 - AIAssistant - INFO - ========================================
+2026-08-08 15:51:10,835 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 15:51:10,835 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 15:51:10,835 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 15:51:12,615 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 15:51:12,615 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 15:51:12,615 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 15:53:19,380 - AIAssistant - INFO - ========================================
+2026-08-08 15:53:19,380 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 15:53:19,380 - AIAssistant - INFO - ========================================
+2026-08-08 15:53:19,380 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 15:53:19,380 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 15:53:19,381 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 15:53:21,178 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 15:53:21,178 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 15:53:21,178 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 15:55:14,244 - AIAssistant - INFO - ========================================
+2026-08-08 15:55:14,244 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 15:55:14,245 - AIAssistant - INFO - ========================================
+2026-08-08 15:55:14,245 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 15:55:14,245 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 15:55:14,247 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 15:55:15,998 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 15:55:15,998 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 15:55:15,998 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 15:55:55,677 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 15:55:55,677 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 15:55:55,677 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 15:55:55,677 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 15:55:55,678 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 16:13:01,160 - AIAssistant - INFO - ========================================
+2026-08-08 16:13:01,160 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 16:13:01,160 - AIAssistant - INFO - ========================================
+2026-08-08 16:13:01,160 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'get_system_time' với tham số: {}
+2026-08-08 16:13:01,160 - AIAssistant - INFO - [ToolEngine] Tool 'get_system_time' thực thi thành công.
+2026-08-08 16:13:01,160 - AIAssistant - INFO - KẾT QUẢ TEST TOOL: {'success': True, 'data': {'current_time': '2026-08-08 16:13:01'}}
+2026-08-08 16:16:15,241 - AIAssistant - INFO - ========================================
+2026-08-08 16:16:15,241 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 16:16:15,241 - AIAssistant - INFO - ========================================
+2026-08-08 16:16:15,242 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'get_system_time' với tham số: {}
+2026-08-08 16:16:15,242 - AIAssistant - INFO - [ToolEngine] Tool 'get_system_time' thực thi thành công.
+2026-08-08 16:16:15,242 - AIAssistant - INFO - KẾT QUẢ TEST TOOL: {'success': True, 'data': {'current_time': '2026-08-08 16:16:15'}}
+2026-08-08 16:16:15,242 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 16:16:15,242 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 16:16:15,243 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 16:16:17,186 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 16:16:17,186 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 16:16:17,186 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 16:16:25,719 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 16:16:25,720 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 16:16:25,720 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 16:16:25,720 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 16:16:25,720 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 16:35:03,785 - AIAssistant - INFO - ========================================
+2026-08-08 16:35:03,786 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 16:35:03,786 - AIAssistant - INFO - ========================================
+2026-08-08 16:35:03,786 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'get_system_time' với tham số: {}
+2026-08-08 16:35:03,786 - AIAssistant - INFO - [ToolEngine] Tool 'get_system_time' thực thi thành công.
+2026-08-08 16:35:03,786 - AIAssistant - INFO - KẾT QUẢ TEST TOOL: {'success': True, 'data': {'current_time': '2026-08-08 16:35:03'}}
+2026-08-08 16:35:03,786 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 16:35:03,786 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 16:35:03,787 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 16:35:05,585 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 16:35:05,585 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 16:35:05,585 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 16:35:32,373 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'get_system_time' với tham số: {}
+2026-08-08 16:35:32,373 - AIAssistant - INFO - [ToolEngine] Tool 'get_system_time' thực thi thành công.
+2026-08-08 16:36:07,922 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 16:36:07,922 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 16:36:07,922 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 16:36:07,923 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 16:36:07,923 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 18:00:31,495 - AIAssistant - INFO - ========================================
+2026-08-08 18:00:31,495 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:00:31,495 - AIAssistant - INFO - ========================================
+2026-08-08 18:00:31,495 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:00:31,495 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:00:31,496 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:00:33,481 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:00:33,481 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:00:33,481 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:01:12,141 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'create_folder D:\AI_Test_Folder' với tham số: {}
+2026-08-08 18:01:12,143 - AIAssistant - ERROR - [ToolEngine] Tool 'create_folder D:\AI_Test_Folder' không tồn tại.
+2026-08-08 18:12:04,531 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 18:12:04,533 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 18:12:04,533 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 18:12:04,533 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 18:12:04,533 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 18:12:04,980 - AIAssistant - INFO - ========================================
+2026-08-08 18:12:04,980 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:12:04,980 - AIAssistant - INFO - ========================================
+2026-08-08 18:12:04,980 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:12:04,980 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:12:04,981 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:12:06,936 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:12:06,936 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:12:06,936 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:15:52,348 - AIAssistant - INFO - ========================================
+2026-08-08 18:15:52,348 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:15:52,348 - AIAssistant - INFO - ========================================
+2026-08-08 18:15:52,349 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:15:52,349 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:15:52,349 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:15:54,103 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:15:54,103 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:15:54,104 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:19:43,782 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 18:19:43,784 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 18:19:43,784 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 18:19:43,784 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 18:19:43,784 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 18:19:44,218 - AIAssistant - INFO - ========================================
+2026-08-08 18:19:44,219 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:19:44,219 - AIAssistant - INFO - ========================================
+2026-08-08 18:19:44,219 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:19:44,219 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:19:44,220 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:19:46,068 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:19:46,069 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:19:46,069 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:25:42,707 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 18:25:42,709 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 18:25:42,709 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 18:25:42,709 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 18:25:42,709 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 18:25:43,146 - AIAssistant - INFO - ========================================
+2026-08-08 18:25:43,146 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:25:43,146 - AIAssistant - INFO - ========================================
+2026-08-08 18:25:43,146 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:25:43,146 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:25:43,148 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:25:45,032 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:25:45,032 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:25:45,032 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:28:46,560 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 18:28:46,562 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 18:28:46,562 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 18:28:46,562 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 18:28:46,562 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-08 18:29:13,253 - AIAssistant - INFO - ========================================
+2026-08-08 18:29:13,253 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:29:13,253 - AIAssistant - INFO - ========================================
+2026-08-08 18:29:13,254 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:29:13,254 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:29:13,254 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:29:14,949 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:29:14,950 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:29:14,950 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:35:37,508 - AIAssistant - INFO - ========================================
+2026-08-08 18:35:37,508 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-08 18:35:37,509 - AIAssistant - INFO - ========================================
+2026-08-08 18:35:37,509 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-08 18:35:37,509 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-08 18:35:37,514 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-08 18:35:39,174 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-08 18:35:39,175 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-08 18:35:39,175 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-08 18:36:04,455 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'create_folder' với tham số: {'path': 'D:\\AI_Test_Folder'}
+2026-08-08 18:36:04,457 - AIAssistant - INFO - [ToolEngine] Tool 'create_folder' thực thi xong. Kết quả: {'success': True, 'message': 'Folder created successfully at: D:\\AI_Test_Folder'}
+2026-08-08 18:36:50,099 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-08 18:36:50,099 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-08 18:36:50,099 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-08 18:36:50,100 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-08 18:36:50,100 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 00:41:56,999 - AIAssistant - INFO - ========================================
+2026-08-09 00:41:57,000 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 00:41:57,000 - AIAssistant - INFO - ========================================
+2026-08-09 00:41:57,000 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 00:41:57,000 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 00:41:57,005 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 00:42:00,329 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 00:42:00,330 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-09 00:42:00,330 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 00:43:22,685 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'delete_file' với tham số: {'path': 'D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 00:44:05,784 - AIAssistant - INFO - [ToolEngine] Người dùng ĐÃ XÁC NHẬN cho phép 'delete_file'.
+2026-08-09 00:44:05,785 - AIAssistant - INFO - [ToolEngine] Tool 'delete_file' thực thi xong. Kết quả: {'success': True, 'message': 'Đã xóa file thành công: D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 01:12:29,055 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'delete_file' với tham số: {'path': 'D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 01:12:54,559 - AIAssistant - WARNING - [ToolEngine] Người dùng ĐÃ TỪ CHỐI 'delete_file'.
+2026-08-09 01:15:10,543 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 01:15:10,543 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 01:15:10,544 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 01:15:10,544 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 01:15:10,544 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 01:15:11,332 - AIAssistant - INFO - ========================================
+2026-08-09 01:15:11,332 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 01:15:11,332 - AIAssistant - INFO - ========================================
+2026-08-09 01:15:11,332 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 01:15:11,332 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 01:15:11,334 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 01:15:13,278 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 01:15:13,278 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-09 01:15:13,278 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 01:16:29,562 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 01:16:29,562 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 01:16:29,562 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 01:16:29,562 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 01:16:29,562 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 01:16:30,306 - AIAssistant - INFO - ========================================
+2026-08-09 01:16:30,306 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 01:16:30,306 - AIAssistant - INFO - ========================================
+2026-08-09 01:16:30,306 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 01:16:30,306 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 01:16:30,306 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 01:16:32,163 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 01:16:32,163 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-09 01:16:32,163 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 02:03:56,017 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 02:03:56,021 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 02:03:56,021 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 02:03:56,021 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 02:03:56,021 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 02:03:56,846 - AIAssistant - INFO - ========================================
+2026-08-09 02:03:56,846 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 02:03:56,846 - AIAssistant - INFO - ========================================
+2026-08-09 02:03:56,846 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 02:03:56,847 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 02:03:56,847 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 02:03:58,868 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 02:03:58,868 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-09 02:03:58,869 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 02:04:41,300 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'delete_file' với tham số: {'path': 'D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 02:04:48,304 - AIAssistant - WARNING - [ToolEngine] Người dùng ĐÃ TỪ CHỐI 'delete_file'.
+2026-08-09 02:05:35,590 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'delete_file' với tham số: {'path': 'D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 02:06:00,350 - AIAssistant - INFO - [ToolEngine] Người dùng ĐÃ XÁC NHẬN cho phép 'delete_file'.
+2026-08-09 02:06:00,351 - AIAssistant - INFO - [ToolEngine] Tool 'delete_file' thực thi xong. Kết quả: {'success': True, 'message': 'Đã xóa file thành công: D:\\AI_Test_Folder\\rac.txt'}
+2026-08-09 02:19:57,092 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 02:19:57,092 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 02:19:57,092 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 02:19:57,092 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 02:19:57,092 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 02:22:12,743 - AIAssistant - INFO - ========================================
+2026-08-09 02:22:12,743 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 02:22:12,743 - AIAssistant - INFO - ========================================
+2026-08-09 02:22:12,743 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 02:22:12,743 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 02:22:12,744 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 02:22:14,508 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 02:22:14,509 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.1.0)
+2026-08-09 02:22:14,509 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 02:22:49,609 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'list_directory' với tham số: {'path': 'D:\\AI_Test_Folder'}
+2026-08-09 02:22:49,610 - AIAssistant - INFO - [ToolEngine] Tool 'list_directory' thực thi xong. Kết quả: {'success': True, 'data': {'total_items': 3, 'folders': ['Test 1', 'Test 2', 'Test 3'], 'files': []}}
+2026-08-09 02:26:49,298 - AIAssistant - INFO - [ToolEngine] AI yêu cầu gọi tool: 'list_directory' với tham số: {'path': 'D:\\AI_Test_Folder\\Test 1'}
+2026-08-09 02:26:49,299 - AIAssistant - INFO - [ToolEngine] Tool 'list_directory' thực thi xong. Kết quả: {'success': True, 'data': {'total_items': 1, 'folders': [], 'files': ['Test1.txt']}}
+2026-08-09 02:41:30,900 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 02:41:30,900 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 02:41:30,900 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 02:41:30,900 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 02:41:30,900 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-09 03:54:06,035 - AIAssistant - INFO - ========================================
+2026-08-09 03:54:06,035 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-09 03:54:06,036 - AIAssistant - INFO - ========================================
+2026-08-09 03:54:06,039 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder (Plugin: core_filesystem)
+2026-08-09 03:54:06,041 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file (Plugin: core_filesystem)
+2026-08-09 03:54:06,042 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory (Plugin: core_filesystem)
+2026-08-09 03:54:06,042 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file (Plugin: core_filesystem)
+2026-08-09 03:54:06,043 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file (Plugin: core_filesystem)
+2026-08-09 03:54:06,043 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-09 03:54:06,043 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-09 03:54:06,044 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-09 03:54:07,931 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-09 03:54:07,931 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-09 03:54:07,931 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-09 03:56:49,310 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-09 03:56:49,311 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-09 03:56:49,311 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-09 03:56:49,311 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-09 03:56:49,311 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-12 02:49:23,873 - AIAssistant - INFO - ========================================
+2026-08-12 02:49:23,873 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-12 02:49:23,873 - AIAssistant - INFO - ========================================
+2026-08-12 02:49:23,877 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder (Plugin: core_filesystem)
+2026-08-12 02:49:23,877 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file (Plugin: core_filesystem)
+2026-08-12 02:49:23,882 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory (Plugin: core_filesystem)
+2026-08-12 02:49:23,883 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file (Plugin: core_filesystem)
+2026-08-12 02:49:23,885 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file (Plugin: core_filesystem)
+2026-08-12 02:49:23,885 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-12 02:49:23,885 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-12 02:49:23,890 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-12 02:49:26,622 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-12 02:49:26,623 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-12 02:49:26,623 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<

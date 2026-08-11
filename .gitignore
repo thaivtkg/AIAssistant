@@ -1,0 +1,26 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# AI Models (Rất quan trọng - Chống tràn Git)
+Models/*.gguf
+Models/*.bin
+Models/Installed/*
+
+# Database / Memory (Bảo vệ quyền riêng tư)
+Memory/*.db
+Memory/*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Virtual Environment (Nếu bạn có dùng)
+venv/
+env/
+.env
