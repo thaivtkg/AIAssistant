@@ -1,4 +1,5 @@
 import time
+import os
 from typing import List, Optional, Callable, Dict
 from Tools.core_windows.providers.process_provider import ProcessProvider
 from Tools.core_windows.providers.application_provider import ApplicationProvider
@@ -40,11 +41,31 @@ class WindowsManager:
     def resolve_application(self, app_id: str) -> Optional[ApplicationInfo]:
         return self.application.resolve_application(app_id)
         
-    def is_allowed_application_process(self, exe_name: str) -> bool:
-        allowed_exes = []
+    def is_allowed_application_process(self, process: ProcessInfo) -> bool:
+        """
+        Bảo mật P0: Xác thực danh tính tiến trình dựa trên Absolute Executable Path.
+        Không tin tưởng Process Name (basename) để chống giả mạo binary.
+        """
+        if not process or not getattr(process, 'exe', None):
+            return False
+
+        try:
+            # Chuẩn hóa đường dẫn thực tế của tiến trình đang chạy
+            actual_path = os.path.normcase(os.path.realpath(process.exe))
+        except (OSError, TypeError):
+            return False
+
         for app in self.application.ALLOWLIST.values():
-            allowed_exes.append(app.executable_path.split("\\")[-1].lower())
-        return exe_name.lower() in allowed_exes
+            try:
+                # Chuẩn hóa đường dẫn an toàn trong Allowlist
+                allowed_path = os.path.normcase(os.path.realpath(app.executable_path))
+            except (OSError, TypeError):
+                continue
+
+            if actual_path == allowed_path:
+                return True
+
+        return False
 
     def open_application(self, app_id: str) -> bool:
         app = self.resolve_application(app_id)

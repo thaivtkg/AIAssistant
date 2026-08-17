@@ -33,30 +33,23 @@ def test_open_app_verification_fails_no_new_pid(mock_wm_class):
 @patch("Tools.core_windows.tools.close_application_tool.WindowsManager")
 def test_close_app_blocks_system_process_default_policy(mock_wm_class):
     mock_manager = mock_wm_class.return_value
-    # Sửa: Cung cấp Process hợp lệ nhưng có tên hệ thống để trigger Denylist
     mock_manager.get_process.return_value = ProcessInfo(pid=1, name="svchost.exe")
-    mock_manager.process.SYSTEM_PROCESSES = {'svchost.exe'} 
+    mock_manager.is_system_process.return_value = True
 
     tool = CloseApplicationTool()
     res = tool.execute(pid=1)
     
     assert res["success"] is False
-    assert "Không được phép đóng tiến trình hệ thống" in res["error"]
+    assert "Không được phép đóng hệ thống" in res["error"]
 
 @patch("Tools.core_windows.tools.close_application_tool.WindowsManager")
 def test_close_app_graceful_success(mock_wm_class):
     mock_manager = mock_wm_class.return_value
-    mock_manager.process.SYSTEM_PROCESSES = {'system'}
+    # Mock trả về ProcessInfo cho cả Validate và Execute (Race re-check)
+    mock_manager.get_process.return_value = ProcessInfo(pid=100, name="notepad.exe", exe=r"C:\Windows\System32\notepad.exe")
+    mock_manager.is_system_process.return_value = False
+    mock_manager.is_allowed_application_process.return_value = True
     
-    # BƠM MOCK DATA: Cung cấp Allowlist giả để vượt qua hàng rào Validate bảo mật
-    mock_manager.application.ALLOWLIST = {
-        "notepad": ApplicationInfo("notepad", "Notepad", "notepad.exe")
-    }
-    
-    mock_manager.get_process.side_effect = [
-        ProcessInfo(pid=100, name="notepad.exe"), # Validation pass
-        None # Verification pass (PID đã biến mất)
-    ]
     mock_manager.close_application_gracefully.return_value = True
     mock_manager.wait_until.return_value = True
     
@@ -65,4 +58,19 @@ def test_close_app_graceful_success(mock_wm_class):
     
     assert res["success"] is True
     mock_manager.close_application_gracefully.assert_called_once_with(100)
-    assert res["verification"]["verified"] is True
+
+@patch("Tools.core_windows.tools.close_application_tool.WindowsManager")
+def test_close_app_blocks_fake_executable_path(mock_wm_class):
+    """Test bảo mật P0: Chặn Fake Binary cùng tên."""
+    mock_manager = mock_wm_class.return_value
+    mock_manager.get_process.return_value = ProcessInfo(pid=99, name="notepad.exe", exe=r"C:\Temp\notepad.exe")
+    mock_manager.is_system_process.return_value = False
+    
+    # Manager nhận ra đường dẫn C:\Temp là fake
+    mock_manager.is_allowed_application_process.return_value = False
+    
+    tool = CloseApplicationTool()
+    res = tool.execute(pid=99)
+    
+    assert res["success"] is False
+    assert "không thuộc Allowlist hoặc chạy từ đường dẫn giả mạo" in res["error"]

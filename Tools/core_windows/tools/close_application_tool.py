@@ -36,12 +36,12 @@ class CloseApplicationTool(BaseTool):
         except ProcessLookupError:
             return {"valid": False, "error": "NOT_FOUND: PID không tồn tại."}
             
-        # SỬA: Dùng Facade
         if self.manager.is_system_process(proc.name):
             return {"valid": False, "error": f"Lỗi bảo mật nghiêm trọng: Không được phép đóng hệ thống '{proc.name}'."}
             
-        if not self.manager.is_allowed_application_process(proc.name):
-            return {"valid": False, "error": f"Lỗi bảo mật: '{proc.name}' không thuộc Allowlist."}
+        # P0 FIX: Truyền nguyên object ProcessInfo để Manager check Absolute Path
+        if not self.manager.is_allowed_application_process(proc):
+            return {"valid": False, "error": f"Lỗi bảo mật: Tiến trình '{proc.name}' không thuộc Allowlist hoặc chạy từ đường dẫn giả mạo."}
             
         return {"valid": True}
 
@@ -49,10 +49,10 @@ class CloseApplicationTool(BaseTool):
         pid = kwargs.get("pid")
         self._target_pid = pid
         
-        # FIX PID RACE CONDITION: Re-verify trước khi hạ sát
         try:
             proc_race = self.manager.get_process(pid)
-            if not self.manager.is_allowed_application_process(proc_race.name):
+            # P0 FIX: Truyền nguyên object ProcessInfo
+            if not self.manager.is_allowed_application_process(proc_race):
                 return {"success": False, "error_code": "SECURITY_DENIED", "error": "PID đã bị tái sử dụng cho tiến trình không được phép."}
         except ProcessLookupError:
             return {"success": False, "error_code": "NOT_FOUND", "error": "Tiến trình đã biến mất trước khi kịp đóng."}
