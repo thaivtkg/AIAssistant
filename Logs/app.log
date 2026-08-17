@@ -667,3 +667,245 @@
 2026-08-12 05:31:48,030 - AIAssistant - INFO - 
 >>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
 2026-08-12 05:33:34,096 - AIAssistant - INFO - [ToolManager] Người dùng ĐÃ CẤP QUYỀN cho 'write_file'.
+2026-08-18 02:56:31,604 - AIAssistant - INFO - ========================================
+2026-08-18 02:56:31,605 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 02:56:31,606 - AIAssistant - INFO - ========================================
+2026-08-18 02:56:31,608 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 02:56:31,609 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 02:56:31,610 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 02:56:31,611 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 02:56:31,612 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 02:56:31,619 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_processes_tool': No module named 'psutil'
+2026-08-18 02:56:31,622 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.get_process_tool': No module named 'psutil'
+2026-08-18 02:56:31,625 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_windows_tool': No module named 'psutil'
+2026-08-18 02:56:31,627 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.focus_window_tool': No module named 'psutil'
+2026-08-18 02:56:31,629 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.open_application_tool': No module named 'psutil'
+2026-08-18 02:56:31,631 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_application_tool': No module named 'psutil'
+2026-08-18 02:56:31,633 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_window_tool': No module named 'psutil'
+2026-08-18 02:56:31,634 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 02:56:31,634 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 02:56:31,639 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 02:56:34,368 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 02:56:34,369 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 02:56:34,369 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 02:57:51,846 - AIAssistant - INFO - ========================================
+2026-08-18 02:57:51,846 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 02:57:51,846 - AIAssistant - INFO - ========================================
+2026-08-18 02:57:51,848 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 02:57:51,849 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 02:57:51,849 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 02:57:51,850 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 02:57:51,850 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 02:57:51,852 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_processes_tool': No module named 'psutil'
+2026-08-18 02:57:51,853 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.get_process_tool': No module named 'psutil'
+2026-08-18 02:57:51,854 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_windows_tool': No module named 'psutil'
+2026-08-18 02:57:51,855 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.focus_window_tool': No module named 'psutil'
+2026-08-18 02:57:51,856 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.open_application_tool': No module named 'psutil'
+2026-08-18 02:57:51,857 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_application_tool': No module named 'psutil'
+2026-08-18 02:57:51,858 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_window_tool': No module named 'psutil'
+2026-08-18 02:57:51,859 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 02:57:51,859 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 02:57:51,860 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 02:57:53,938 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 02:57:53,939 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 02:57:53,939 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 02:57:58,993 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 02:57:58,993 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 02:57:58,993 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 02:57:58,994 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 02:57:58,994 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 02:58:09,699 - AIAssistant - INFO - ========================================
+2026-08-18 02:58:09,699 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 02:58:09,700 - AIAssistant - INFO - ========================================
+2026-08-18 02:58:09,701 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 02:58:09,702 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 02:58:09,702 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 02:58:09,704 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 02:58:09,705 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 02:58:09,729 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_processes_tool': No module named 'win32gui'
+2026-08-18 02:58:09,730 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.get_process_tool': No module named 'win32gui'
+2026-08-18 02:58:09,731 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.list_windows_tool': No module named 'win32gui'
+2026-08-18 02:58:09,732 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.focus_window_tool': No module named 'win32gui'
+2026-08-18 02:58:09,732 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.open_application_tool': No module named 'win32gui'
+2026-08-18 02:58:09,734 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_application_tool': No module named 'win32gui'
+2026-08-18 02:58:09,735 - AIAssistant - ERROR - [PluginLoader] Không tìm thấy file code 'Tools.core_windows.tools.close_window_tool': No module named 'win32gui'
+2026-08-18 02:58:09,736 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 02:58:09,736 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 02:58:09,737 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 02:58:11,641 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 02:58:11,641 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 02:58:11,641 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 02:58:24,113 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 02:58:24,114 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 02:58:24,114 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 02:58:24,115 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 02:58:24,115 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:00:03,764 - AIAssistant - INFO - ========================================
+2026-08-18 03:00:03,764 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:00:03,765 - AIAssistant - INFO - ========================================
+2026-08-18 03:00:03,766 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:00:03,767 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:00:03,767 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:00:03,767 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:00:03,768 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:00:03,787 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:00:03,788 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:00:03,789 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:00:03,789 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:00:03,789 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:00:03,790 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:00:03,790 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:00:03,791 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:00:03,791 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:00:03,792 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 03:00:05,650 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:00:05,650 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:00:05,650 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:07:01,878 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:07:01,878 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:07:01,880 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:07:01,880 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:07:01,880 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:07:04,337 - AIAssistant - INFO - ========================================
+2026-08-18 03:07:04,337 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:07:04,337 - AIAssistant - INFO - ========================================
+2026-08-18 03:07:04,339 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:07:04,339 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:07:04,340 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:07:04,340 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:07:04,341 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:07:04,360 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:07:04,361 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:07:04,361 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:07:04,362 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:07:04,362 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:07:04,362 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:07:04,363 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:07:04,364 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:07:04,364 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:07:04,365 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 99)...
+2026-08-18 03:07:06,178 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:07:06,178 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:07:06,178 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:07:54,287 - AIAssistant - ERROR - Lỗi suy luận LLM Engine: Requested tokens (10455) exceed context window of 2048
+2026-08-18 03:08:54,794 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:08:54,794 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:08:54,796 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:08:54,796 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:08:54,796 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:08:57,658 - AIAssistant - INFO - ========================================
+2026-08-18 03:08:57,658 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:08:57,658 - AIAssistant - INFO - ========================================
+2026-08-18 03:08:57,660 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:08:57,660 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:08:57,660 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:08:57,660 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:08:57,662 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:08:57,678 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:08:57,678 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:08:57,679 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:08:57,679 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:08:57,680 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:08:57,680 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:08:57,681 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:08:57,681 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:08:57,681 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:08:57,681 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 03:08:59,456 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:08:59,456 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:08:59,456 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:11:40,591 - AIAssistant - ERROR - Lỗi suy luận LLM Engine: Requested tokens (10488) exceed context window of 2048
+2026-08-18 03:13:45,931 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:13:45,931 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:13:45,931 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:13:45,931 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:13:45,931 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:13:48,256 - AIAssistant - INFO - ========================================
+2026-08-18 03:13:48,258 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:13:48,258 - AIAssistant - INFO - ========================================
+2026-08-18 03:13:48,258 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:13:48,260 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:13:48,260 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:13:48,261 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:13:48,261 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:13:48,281 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:13:48,281 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:13:48,283 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:13:48,283 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:13:48,283 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:13:48,283 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:13:48,285 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:13:48,285 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:13:48,285 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:13:48,286 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 2048, GPU Layers: 0)...
+2026-08-18 03:13:50,067 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:13:50,067 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:13:50,068 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:27:27,337 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:27:27,339 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:27:27,339 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:27:27,340 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:27:27,340 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:27:29,708 - AIAssistant - INFO - ========================================
+2026-08-18 03:27:29,710 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:27:29,711 - AIAssistant - INFO - ========================================
+2026-08-18 03:27:29,715 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:27:29,715 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:27:29,717 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:27:29,718 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:27:29,718 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:27:29,747 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:27:29,748 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:27:29,749 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:27:29,749 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:27:29,750 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:27:29,751 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:27:29,752 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:27:29,752 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:27:29,752 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:27:29,753 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 8192, GPU Layers: 0)...
+2026-08-18 03:27:31,865 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:27:31,865 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:27:31,865 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:35:23,467 - AIAssistant - INFO - [ToolManager] Người dùng ĐÃ CẤP QUYỀN cho 'close_application'.
+2026-08-18 03:38:26,991 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:38:26,992 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:38:26,992 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:38:26,993 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:38:26,993 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
+2026-08-18 03:38:39,237 - AIAssistant - INFO - ========================================
+2026-08-18 03:38:39,238 - AIAssistant - INFO - Khởi động Offline AI Assistant - 1.0 - Sprint 0
+2026-08-18 03:38:39,238 - AIAssistant - INFO - ========================================
+2026-08-18 03:38:39,239 - AIAssistant - INFO -   [+] Đã nạp Tool: create_folder
+2026-08-18 03:38:39,240 - AIAssistant - INFO -   [+] Đã nạp Tool: delete_file
+2026-08-18 03:38:39,240 - AIAssistant - INFO -   [+] Đã nạp Tool: list_directory
+2026-08-18 03:38:39,241 - AIAssistant - INFO -   [+] Đã nạp Tool: read_file
+2026-08-18 03:38:39,241 - AIAssistant - INFO -   [+] Đã nạp Tool: write_file
+2026-08-18 03:38:39,262 - AIAssistant - INFO -   [+] Đã nạp Tool: list_processes
+2026-08-18 03:38:39,263 - AIAssistant - INFO -   [+] Đã nạp Tool: get_process
+2026-08-18 03:38:39,263 - AIAssistant - INFO -   [+] Đã nạp Tool: list_windows
+2026-08-18 03:38:39,264 - AIAssistant - INFO -   [+] Đã nạp Tool: focus_window
+2026-08-18 03:38:39,264 - AIAssistant - INFO -   [+] Đã nạp Tool: open_application
+2026-08-18 03:38:39,265 - AIAssistant - INFO -   [+] Đã nạp Tool: close_application
+2026-08-18 03:38:39,266 - AIAssistant - INFO -   [+] Đã nạp Tool: close_window
+2026-08-18 03:38:39,267 - AIAssistant - INFO - [SystemInfo] Đã sẵn sàng.
+2026-08-18 03:38:39,267 - AIAssistant - INFO - [PluginLoaded] SystemInfo (v1.0.0)
+2026-08-18 03:38:39,267 - AIAssistant - INFO - Đang nạp model từ: Models/qwen3-4b.gguf (Context: 8192, GPU Layers: 0)...
+2026-08-18 03:38:41,302 - AIAssistant - INFO - Model AI đã được nạp thành công!
+2026-08-18 03:38:41,302 - AIAssistant - INFO - [PluginLoaded] AIChat (v1.2.0)
+2026-08-18 03:38:41,302 - AIAssistant - INFO - 
+>>> BẮT ĐẦU PHIÊN CHAT OFFLINE (Gõ 'exit' để thoát) <<<
+2026-08-18 03:43:00,341 - AIAssistant - INFO - [ToolManager] Người dùng ĐÃ CẤP QUYỀN cho 'close_application'.
+2026-08-18 03:45:25,237 - AIAssistant - INFO - [SystemInfo] Đã giải phóng tài nguyên.
+2026-08-18 03:45:25,238 - AIAssistant - INFO - [PluginShutdown] SystemInfo
+2026-08-18 03:45:25,239 - AIAssistant - INFO - [AIChat] Đã ngắt kết nối Plugin AI Chat.
+2026-08-18 03:45:25,239 - AIAssistant - INFO - [PluginShutdown] AIChat
+2026-08-18 03:45:25,239 - AIAssistant - INFO - Hệ thống đã thoát an toàn.
