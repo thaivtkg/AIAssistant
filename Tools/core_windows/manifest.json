@@ -1,0 +1,35 @@
+{
+    "plugin_id": "core_windows",
+    "name": "Windows Manager Plugin",
+    "enabled": true,
+    "tools": [
+        {
+            "module": "tools.list_processes_tool",
+            "class": "ListProcessesTool"
+        },
+        {
+            "module": "tools.get_process_tool",
+            "class": "GetProcessTool"
+        },
+        {
+            "module": "tools.list_windows_tool",
+            "class": "ListWindowsTool"
+        },
+        {
+            "module": "tools.focus_window_tool",
+            "class": "FocusWindowTool"
+        },
+        {
+            "module": "tools.open_application_tool",
+            "class": "OpenApplicationTool"
+        },
+        {
+            "module": "tools.close_application_tool",
+            "class": "CloseApplicationTool"
+        },
+        {
+            "module": "tools.close_window_tool",
+            "class": "CloseWindowTool"
+        }
+    ]
+}

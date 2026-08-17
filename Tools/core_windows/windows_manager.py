@@ -1,0 +1,99 @@
+import time
+import os
+from typing import List, Optional, Callable, Dict
+from Tools.core_windows.providers.process_provider import ProcessProvider
+from Tools.core_windows.providers.application_provider import ApplicationProvider
+from Tools.core_windows.providers.window_provider import WindowProvider
+from Tools.core_windows.models.windows_models import ProcessInfo, ApplicationInfo, WindowInfo
+
+class WindowsManager:
+    def __init__(self):
+        self.process = ProcessProvider()
+        self.application = ApplicationProvider()
+        self.window = WindowProvider()
+
+    def wait_until(self, condition_func: Callable[[], bool], timeout: float = 3.0, interval: float = 0.2) -> bool:
+        start_time = time.monotonic()
+        while time.monotonic() - start_time < timeout:
+            if condition_func():
+                return True
+            time.sleep(interval)
+        return False
+
+    # --- PROCESS API ---
+    def list_processes(self, name_filter: str = "") -> List[ProcessInfo]:
+        return self.process.list_processes(name_filter)
+
+    def get_process(self, pid: int):
+        # Trả về Exception để Tool hứng
+        return self.process.get_process(pid)
+
+    def get_process_pids_by_name(self, exe_name: str) -> List[int]:
+        return self.process.get_pids_by_name(exe_name)
+
+    def is_system_process(self, process_name: str) -> bool:
+        return self.process.is_system_process(process_name)
+
+    # --- APPLICATION API ---
+    def get_allowed_apps(self) -> Dict[str, str]:
+        return self.application.get_allowed_apps()
+
+    def resolve_application(self, app_id: str) -> Optional[ApplicationInfo]:
+        return self.application.resolve_application(app_id)
+        
+    def is_allowed_application_process(self, process: ProcessInfo) -> bool:
+        """
+        Bảo mật P0: Xác thực danh tính tiến trình dựa trên Absolute Executable Path.
+        Không tin tưởng Process Name (basename) để chống giả mạo binary.
+        """
+        if not process or not getattr(process, 'exe', None):
+            return False
+
+        try:
+            # Chuẩn hóa đường dẫn thực tế của tiến trình đang chạy
+            actual_path = os.path.normcase(os.path.realpath(process.exe))
+        except (OSError, TypeError):
+            return False
+
+        for app in self.application.ALLOWLIST.values():
+            try:
+                # Chuẩn hóa đường dẫn an toàn trong Allowlist
+                allowed_path = os.path.normcase(os.path.realpath(app.executable_path))
+            except (OSError, TypeError):
+                continue
+
+            if actual_path == allowed_path:
+                return True
+
+        return False
+
+    def open_application(self, app_id: str) -> bool:
+        app = self.resolve_application(app_id)
+        if not app:
+            return False
+        return self.application.open_application(app)
+
+    def close_application_gracefully(self, pid: int) -> bool:
+        hwnds = self.window.get_hwnds_by_pid(pid)
+        if not hwnds: return False
+        success = False
+        for hwnd in hwnds:
+            if self.window.close_window(hwnd):
+                success = True
+        return success
+
+    # --- WINDOW API ---
+    def list_windows(self) -> List[WindowInfo]:
+        return self.window.list_windows()
+
+    def focus_window(self, hwnd: int) -> bool:
+        return self.window.focus_window(hwnd)
+
+    def close_window(self, hwnd: int) -> bool:
+        return self.window.close_window(hwnd)
+        
+    def is_window_foreground(self, hwnd: int) -> bool:
+        return self.window.get_foreground_window() == hwnd
+        
+    def is_window_alive(self, hwnd: int) -> bool:
+        return self.window.is_window_alive(hwnd)
