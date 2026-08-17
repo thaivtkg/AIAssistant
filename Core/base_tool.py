@@ -24,7 +24,11 @@ class BaseTool:
     # TUYỆT ĐỐI KHÔNG OVERRIDE HÀM NÀY Ở SUBCLASS
     def execute(self, **kwargs) -> Dict[str, Any]:
         # 1. Validate
-        val_result = self._validate(**kwargs)
+        try:
+            val_result = self._validate(**kwargs)
+        except Exception as e:
+            return {"success": False, "error": f"Validation exception: {str(e)}"}
+
         if not val_result.get("valid", False):
             return {"success": False, "error": f"Validation failed: {val_result.get('error', 'Unknown')}"}
 
