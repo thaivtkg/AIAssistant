@@ -32,18 +32,16 @@ class GetProcessTool(BaseTool):
 
     def _execute(self, **kwargs) -> Dict[str, Any]:
         pid = kwargs.get("pid")
-        proc = self.manager.get_process(pid)
-        
-        if not proc:
-            return {"success": False, "error": f"Không tìm thấy tiến trình với PID {pid} (Có thể đã đóng hoặc AccessDenied)."}
-        
-        return {
-            "success": True, 
-            "process": {
-                "pid": proc.pid, 
-                "name": proc.name, 
-                "exe": proc.exe, 
-                "status": proc.status, 
-                "memory_mb": proc.memory_mb
+        try:
+            proc = self.manager.get_process(pid)
+            return {
+                "success": True, 
+                "process": {
+                    "pid": proc.pid, "name": proc.name, "exe": proc.exe, 
+                    "status": proc.status, "memory_mb": proc.memory_mb
+                }
             }
-        }
+        except PermissionError:
+            return {"success": False, "error_code": "ACCESS_DENIED", "error": "Không có quyền thao tác/đọc thông tin tiến trình."}
+        except ProcessLookupError:
+            return {"success": False, "error_code": "NOT_FOUND", "error": "Không tìm thấy tiến trình (PID không tồn tại hoặc đã đóng)."}

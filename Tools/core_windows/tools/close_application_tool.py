@@ -28,23 +28,20 @@ class CloseApplicationTool(BaseTool):
         pid = kwargs.get("pid")
         if not isinstance(pid, int) or pid <= 0:
             return {"valid": False, "error": "PID không hợp lệ."}
+        
+        try:
+            proc = self.manager.get_process(pid)
+        except PermissionError:
+            return {"valid": False, "error": "ACCESS_DENIED: Không có quyền truy cập PID này."}
+        except ProcessLookupError:
+            return {"valid": False, "error": "NOT_FOUND: PID không tồn tại."}
             
-        proc = self.manager.get_process(pid)
-        if not proc:
-            return {"valid": False, "error": f"Không tìm thấy tiến trình với PID {pid}."}
+        # SỬA: Dùng Facade
+        if self.manager.is_system_process(proc.name):
+            return {"valid": False, "error": f"Lỗi bảo mật nghiêm trọng: Không được phép đóng hệ thống '{proc.name}'."}
             
-        if proc.name.lower() in self.manager.process.SYSTEM_PROCESSES:
-            return {"valid": False, "error": f"Lỗi bảo mật nghiêm trọng: Không được phép đóng tiến trình hệ thống '{proc.name}'."}
-            
-        # SIẾT CHẶT (MEDIUM): Phải thuộc ALLOWLIST mới được phép đóng
-        allowed_exes = []
-        for app in self.manager.application.ALLOWLIST.values():
-            exe_name = app.executable_path.split("\\")[-1].lower()
-            allowed_exes.append(exe_name)
-            allowed_exes.append(app.app_id.lower())
-            
-        if proc.name.lower() not in allowed_exes:
-            return {"valid": False, "error": f"Lỗi bảo mật: Tiến trình '{proc.name}' không nằm trong Allowlist. Agent chỉ được phép đóng các ứng dụng do Agent quản lý."}
+        if not self.manager.is_allowed_application_process(proc.name):
+            return {"valid": False, "error": f"Lỗi bảo mật: '{proc.name}' không thuộc Allowlist."}
             
         return {"valid": True}
 
@@ -52,26 +49,37 @@ class CloseApplicationTool(BaseTool):
         pid = kwargs.get("pid")
         self._target_pid = pid
         
-        # Gọi Graceful Close (Gửi WM_CLOSE tới các cửa sổ của PID)
+        # FIX PID RACE CONDITION: Re-verify trước khi hạ sát
+        try:
+            proc_race = self.manager.get_process(pid)
+            if not self.manager.is_allowed_application_process(proc_race.name):
+                return {"success": False, "error_code": "SECURITY_DENIED", "error": "PID đã bị tái sử dụng cho tiến trình không được phép."}
+        except ProcessLookupError:
+            return {"success": False, "error_code": "NOT_FOUND", "error": "Tiến trình đã biến mất trước khi kịp đóng."}
+        except PermissionError:
+            return {"success": False, "error_code": "ACCESS_DENIED", "error": "Mất quyền truy cập vào PID."}
+        
         success = self.manager.close_application_gracefully(pid)
         if not success:
-            return {"success": False, "error": f"Ứng dụng (PID: {pid}) không phản hồi lệnh đóng (Không có HWND hợp lệ). Không hỗ trợ Terminate/Kill trong Sprint 4."}
+            return {"success": False, "error": f"Ứng dụng (PID: {pid}) không có cửa sổ để nhận lệnh đóng WM_CLOSE."}
             
-        return {"success": True, "message": f"Đã gửi tín hiệu đóng an toàn (WM_CLOSE) tới ứng dụng PID {pid}."}
+        return {"success": True, "message": f"Đã gửi tín hiệu WM_CLOSE tới PID {pid}."}
 
     def verify(self, **kwargs) -> Dict[str, Any]:
         pid = getattr(self, "_target_pid", None)
-        if not pid:
-            return {"verified": True, "message": "Không có thao tác nào."}
+        if not pid: return {"verified": True, "message": "Không có thao tác nào."}
 
-        # Hậu kiểm: Xác minh PID đã thực sự biến mất
-        is_closed = self.manager.wait_until(
-            condition_func=lambda: self.manager.get_process(pid) is None,
-            timeout=3.0,
-            interval=0.5
-        )
+        def is_closed_func():
+            try:
+                self.manager.get_process(pid)
+                return False
+            except ProcessLookupError:
+                return True
+            except PermissionError:
+                return False # Access denied = còn sống nhưng bị chặn quyền
+
+        is_closed = self.manager.wait_until(is_closed_func, timeout=3.0, interval=0.5)
 
         if not is_closed:
-            return {"verified": False, "message": f"Verification failed: Ứng dụng PID {pid} vẫn đang chạy (Có thể do ứng dụng yêu cầu lưu file hoặc treo)."}
-            
-        return {"verified": True, "message": f"Xác minh ứng dụng PID {pid} đã đóng hoàn toàn."}
+            return {"verified": False, "message": f"Verification failed: PID {pid} vẫn đang chạy (Có thể bị treo hoặc hỏi lưu file)."}
+        return {"verified": True, "message": f"Xác minh PID {pid} đã đóng hoàn toàn."}

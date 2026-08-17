@@ -12,19 +12,13 @@ class OpenApplicationTool(BaseTool):
         self.manager = WindowsManager()
 
     def get_schema(self) -> Dict[str, Any]:
-        allowed_apps = self.manager.application.get_allowed_apps()
+        allowed_apps = self.manager.get_allowed_apps() # SỬA: Gọi Facade
         app_list = ", ".join([f"'{k}' ({v})" for k, v in allowed_apps.items()])
         return {
-            "name": self.name,
-            "description": self.description,
+            "name": self.name, "description": self.description,
             "parameters": {
                 "type": "object",
-                "properties": {
-                    "app_id": {
-                        "type": "string", 
-                        "description": f"ID của ứng dụng cần mở. CHỈ ĐƯỢC PHÉP CHỌN: {app_list}."
-                    }
-                },
+                "properties": {"app_id": {"type": "string", "description": f"ID của ứng dụng. CHỈ ĐƯỢC CHỌN: {app_list}."}},
                 "required": ["app_id"]
             }
         }
@@ -40,38 +34,28 @@ class OpenApplicationTool(BaseTool):
     def _execute(self, **kwargs) -> Dict[str, Any]:
         app_id = kwargs.get("app_id")
         app = self.manager.resolve_application(app_id)
-        
         exe_name = app.executable_path.split("\\")[-1]
         
-        # 1. Chụp ảnh snapshot các PID trước khi khởi chạy
-        self._before_pids = set(self.manager.process.get_pids_by_name(exe_name))
+        # SỬA: Gọi Facade thay vì self.manager.process...
+        self._before_pids = set(self.manager.get_process_pids_by_name(exe_name))
         self._last_exe = exe_name
         
-        # 2. Khởi chạy
         success = self.manager.open_application(app_id)
         if not success:
             return {"success": False, "error": f"Lỗi OS: Không thể khởi chạy '{app_id}'."}
-            
-        return {"success": True, "message": f"Đã gửi lệnh khởi chạy ứng dụng '{app.name}'."}
+        return {"success": True, "message": f"Đã gửi lệnh khởi chạy '{app.name}'."}
 
     def verify(self, **kwargs) -> Dict[str, Any]:
         exe_name = getattr(self, "_last_exe", None)
         before_pids = getattr(self, "_before_pids", set())
+        if not exe_name: return {"verified": False, "message": "Lỗi nội bộ."}
 
-        if not exe_name:
-            return {"verified": False, "message": "Lỗi nội bộ."}
-
-        # Kiểm tra xem có PID nào MỚI xuất hiện không
+        # SỬA: Gọi Facade
         def launched():
-            current_pids = set(self.manager.process.get_pids_by_name(exe_name))
+            current_pids = set(self.manager.get_process_pids_by_name(exe_name))
             return bool(current_pids - before_pids)
 
         verified = self.manager.wait_until(launched, timeout=5.0, interval=0.5)
-
         if not verified:
-            return {
-                "verified": False, 
-                "message": f"Verification failed: Không phát hiện tiến trình mới của '{exe_name}'. Có thể HĐH từ chối hoặc ứng dụng đã crash lập tức."
-            }
-            
-        return {"verified": True, "message": "Xác minh ứng dụng đã khởi chạy thành công (Phát hiện PID mới)."}
+            return {"verified": False, "message": f"Verification failed: Không phát hiện tiến trình mới của '{exe_name}'."}
+        return {"verified": True, "message": "Xác minh ứng dụng đã khởi chạy thành công."}
