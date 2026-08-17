@@ -6,7 +6,7 @@ class ListProcessesTool(BaseTool):
     def __init__(self):
         super().__init__(
             name="list_processes", 
-            description="Liệt kê tiến trình. LUÔN SỬ DỤNG 'name_filter' để tìm kiếm ứng dụng cụ thể nhằm TRÁNH TRÀN BỘ NHỚ (Context Window).", 
+            description="Liệt kê tiến trình. LUÔN SỬ DỤNG 'name_filter' để tìm kiếm ứng dụng cụ thể nhằm TRÁNH TRÀN BỘ NHỚ.", 
             requires_permission=False
         )
         self.manager = WindowsManager()
@@ -20,11 +20,11 @@ class ListProcessesTool(BaseTool):
                 "properties": {
                     "name_filter": {
                         "type": "string",
-                        "description": "Từ khóa tên tiến trình để lọc (VD: 'notepad', 'chrome'). AI Bắt buộc dùng tham số này nếu đang tìm một ứng dụng cụ thể."
+                        "description": "Từ khóa tên tiến trình để lọc (VD: 'notepad')."
                     },
                     "limit": {
                         "type": "integer",
-                        "description": "Giới hạn số lượng tiến trình trả về để không làm tràn context (Mặc định: 15)."
+                        "description": "Giới hạn số lượng trả về (Mặc định: 15)."
                     }
                 },
                 "required": []
@@ -38,20 +38,13 @@ class ListProcessesTool(BaseTool):
         return {"valid": True}
 
     def _execute(self, **kwargs) -> Dict[str, Any]:
-        name_filter = kwargs.get("name_filter", "").lower()
+        name_filter = kwargs.get("name_filter", "")
         limit = kwargs.get("limit", 15)
         
-        all_processes = self.manager.list_processes()
+        # TỐI ƯU (P2.1): Đẩy filter xuống Provider để giảm Overhead OS I/O
+        filtered_processes = self.manager.list_processes(name_filter=name_filter)
         
-        # Áp dụng bộ lọc (Filter)
-        if name_filter:
-            filtered_processes = [p for p in all_processes if name_filter in p.name.lower()]
-        else:
-            filtered_processes = all_processes
-            
         total_found = len(filtered_processes)
-        
-        # Áp dụng giới hạn số lượng (Truncate) để bảo vệ LLM
         limited_processes = filtered_processes[:limit]
         
         proc_list = [
@@ -63,10 +56,9 @@ class ListProcessesTool(BaseTool):
             } for p in limited_processes
         ]
         
-        # Trả về thông báo cảnh báo nếu số lượng bị cắt bớt
         message = f"Hiển thị {len(proc_list)}/{total_found} tiến trình."
         if total_found > limit:
-            message += " (Đã bị cắt bớt để bảo vệ bộ nhớ. Vui lòng dùng name_filter chi tiết hơn)."
+            message += " (Đã bị cắt bớt. Vui lòng dùng name_filter chi tiết hơn)."
 
         return {
             "success": True, 

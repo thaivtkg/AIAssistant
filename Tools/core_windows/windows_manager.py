@@ -19,18 +19,26 @@ class WindowsManager:
             time.sleep(interval)
         return False
 
-    def list_processes(self) -> List[ProcessInfo]:
-        return self.process.list_processes()
+    def list_processes(self, name_filter: str = "") -> List[ProcessInfo]:
+        return self.process.list_processes(name_filter)
 
     def get_process(self, pid: int) -> Optional[ProcessInfo]:
         return self.process.get_process(pid)
 
-    # TỐI ƯU HÓA: Gọi thẳng hàm Check siêu tốc từ Provider
-    def check_process_by_name(self, exe_name: str) -> bool:
-        return self.process.check_process_by_name(exe_name)
-
     def terminate_process(self, pid: int) -> bool:
         return self.process.terminate_process(pid)
+
+    def close_application_gracefully(self, pid: int) -> bool:
+        """Gửi lệnh WM_CLOSE tới tất cả cửa sổ của PID (Không Kill)."""
+        hwnds = self.window.get_hwnds_by_pid(pid)
+        if not hwnds:
+            return False # Không tìm thấy cửa sổ để đóng an toàn
+            
+        success = False
+        for hwnd in hwnds:
+            if self.window.close_window(hwnd):
+                success = True
+        return success
 
     def resolve_application(self, app_id: str) -> Optional[ApplicationInfo]:
         return self.application.resolve_application(app_id)

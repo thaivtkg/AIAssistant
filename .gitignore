@@ -24,3 +24,9 @@ Thumbs.db
 venv/
 env/
 .env
+
+*.pyc
+Memory/*.db
+Logs/
+Models/*.gguf"Logs/*.log" 
+"Logs/app.log" 

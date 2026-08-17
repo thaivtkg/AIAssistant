@@ -11,23 +11,29 @@ class WindowProvider:
             if not win32gui.IsWindowVisible(hwnd):
                 return
             title = win32gui.GetWindowText(hwnd)
-            if not title: # Bỏ qua cửa sổ ẩn hoặc không có tên
+            if not title:
                 return
-                
             _, pid = win32process.GetWindowThreadProcessId(hwnd)
             placement = win32gui.GetWindowPlacement(hwnd)
             minimized = placement[1] == win32con.SW_SHOWMINIMIZED
             
             windows.append(WindowInfo(
-                hwnd=hwnd,
-                title=title,
-                pid=pid,
-                visible=True,
-                minimized=minimized
+                hwnd=hwnd, title=title, pid=pid, 
+                visible=True, minimized=minimized
             ))
-            
         win32gui.EnumWindows(callback, None)
         return windows
+
+    def get_hwnds_by_pid(self, pid: int) -> List[int]:
+        """Lấy tất cả Window Handles thuộc về một PID để Graceful Close."""
+        hwnds = []
+        def callback(hwnd, extra):
+            _, window_pid = win32process.GetWindowThreadProcessId(hwnd)
+            # Không ép IsWindowVisible vì app có thể đang ở khay hệ thống (Tray)
+            if window_pid == pid:
+                hwnds.append(hwnd)
+        win32gui.EnumWindows(callback, None)
+        return hwnds
 
     def get_foreground_window(self) -> Optional[int]:
         hwnd = win32gui.GetForegroundWindow()
