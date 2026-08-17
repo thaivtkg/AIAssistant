@@ -36,6 +36,16 @@ class CloseApplicationTool(BaseTool):
         if proc.name.lower() in self.manager.process.SYSTEM_PROCESSES:
             return {"valid": False, "error": f"Lỗi bảo mật nghiêm trọng: Không được phép đóng tiến trình hệ thống '{proc.name}'."}
             
+        # SIẾT CHẶT (MEDIUM): Phải thuộc ALLOWLIST mới được phép đóng
+        allowed_exes = []
+        for app in self.manager.application.ALLOWLIST.values():
+            exe_name = app.executable_path.split("\\")[-1].lower()
+            allowed_exes.append(exe_name)
+            allowed_exes.append(app.app_id.lower())
+            
+        if proc.name.lower() not in allowed_exes:
+            return {"valid": False, "error": f"Lỗi bảo mật: Tiến trình '{proc.name}' không nằm trong Allowlist. Agent chỉ được phép đóng các ứng dụng do Agent quản lý."}
+            
         return {"valid": True}
 
     def _execute(self, **kwargs) -> Dict[str, Any]:

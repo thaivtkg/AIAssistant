@@ -31,4 +31,5 @@ def test_close_window_verification_fails_if_still_open(mock_wm_class):
     res = tool.execute(hwnd=9999)
     
     assert res["success"] is False
-    assert "vẫn còn hiển thị" in res["error"]
+    # SỬA LỖI: Cập nhật lại text assertion cho khớp với message mới
+    assert "vẫn còn tồn tại" in res["error"]

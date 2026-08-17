@@ -44,14 +44,14 @@ class CloseWindowTool(BaseTool):
         if not hwnd:
             return {"verified": False, "message": "Lỗi nội bộ."}
 
-        # Kiểm tra danh sách cửa sổ xem HWND đã bốc hơi chưa
+        # SỬA LỖI: Kiểm tra trực tiếp bằng win32gui.IsWindow thay vì list_windows()
         is_closed = self.manager.wait_until(
-            condition_func=lambda: not any(w.hwnd == hwnd for w in self.manager.list_windows()),
+            condition_func=lambda: not self.manager.is_window_alive(hwnd),
             timeout=3.0,
             interval=0.2
         )
 
         if not is_closed:
-            return {"verified": False, "message": f"Verification failed: Cửa sổ HWND {hwnd} vẫn còn hiển thị (Có thể đang bị treo hoặc hỏi lưu file)."}
+            return {"verified": False, "message": f"Verification failed: Cửa sổ HWND {hwnd} vẫn còn tồn tại (Có thể đang bị treo hoặc hỏi lưu file)."}
             
         return {"verified": True, "message": "Xác minh cửa sổ đã được đóng."}

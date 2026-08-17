@@ -60,3 +60,6 @@ class WindowsManager:
         
     def is_window_foreground(self, hwnd: int) -> bool:
         return self.window.get_foreground_window() == hwnd
+    
+    def is_window_alive(self, hwnd: int) -> bool:
+        return self.window.is_window_alive(hwnd)

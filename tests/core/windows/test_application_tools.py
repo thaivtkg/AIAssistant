@@ -47,6 +47,12 @@ def test_close_app_blocks_system_process_default_policy(mock_wm_class):
 def test_close_app_graceful_success(mock_wm_class):
     mock_manager = mock_wm_class.return_value
     mock_manager.process.SYSTEM_PROCESSES = {'system'}
+    
+    # BƠM MOCK DATA: Cung cấp Allowlist giả để vượt qua hàng rào Validate bảo mật
+    mock_manager.application.ALLOWLIST = {
+        "notepad": ApplicationInfo("notepad", "Notepad", "notepad.exe")
+    }
+    
     mock_manager.get_process.side_effect = [
         ProcessInfo(pid=100, name="notepad.exe"), # Validation pass
         None # Verification pass (PID đã biến mất)
